@@ -1,7 +1,7 @@
 // import fetch from 'node-fetch';
 import initSession from './main.mjs';
-import getUserDetails from './routes/users.mjs';
-import getTicketsNearDeadline from './routes/tickets.mjs';
+import getUserDetails from './components/users.mjs';
+import getTicketsNearDeadline from './components/tickets.mjs';
 
 export default async function main() {
     const session_token = await initSession();
