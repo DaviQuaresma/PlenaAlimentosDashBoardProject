@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(express.json());
 
-app.get('/view1', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const jsonResponse = await main();
         res.json(JSON.parse(jsonResponse)); // Enviar o JSON como resposta bem formatada

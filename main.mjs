@@ -8,7 +8,8 @@ const APP_TOKEN = process.env.APP_TOKEN;
 
 export default async function initSession() {
     try {
-        const response = await fetch('https://csti.cdmgrupo.com/glpi_homolog/apirest.php/initSession?get_full_session=true', {
+                                    //https://csti.cdmgrupo.com/glpi_homolog/apirest.php/initSession?get_full_session=true
+        const response = await fetch('https://csti.cdmgrupo.com/apirest.php/initSession?get_full_session=true', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
