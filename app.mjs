@@ -3,7 +3,7 @@ import getUserDetails from './components/users.mjs';
 import getTicketsNearDeadline from './components/tickets.mjs';
 import calculateTicketTimes from './components/calculateTicketTimes.mjs';
 
-export default async function main() {
+export default async function app() {
     const session_token = await initSession();
     if (!session_token) {
         console.error('Não foi possível obter o session_token');
@@ -56,4 +56,4 @@ export default async function main() {
     }
 }
 
-main();
+app();
