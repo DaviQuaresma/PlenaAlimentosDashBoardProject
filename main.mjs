@@ -7,9 +7,8 @@ const USER = process.env.USER;
 const APP_TOKEN = process.env.APP_TOKEN;
 
 export default async function initSession() {
-    try {
-                                    //https://csti.cdmgrupo.com/glpi_homolog/apirest.php/initSession?get_full_session=true
-        const response = await fetch('https://csti.cdmgrupo.com/apirest.php/initSession?get_full_session=true', {
+    try {                               
+        const response = await fetch(process.env.URL_HML+'/initSession?get_full_session=true', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

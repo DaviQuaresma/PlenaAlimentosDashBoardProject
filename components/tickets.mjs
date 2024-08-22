@@ -9,8 +9,7 @@ function getLastDayOfYear() {
     const lastDayOfYear = getLastDayOfYear(); 
 
 export default async function getTicketsNearDeadline(session_token) {
-                    //https://csti.cdmgrupo.com/glpi_homolog/apirest.php
-  const apiBaseUrl = 'https://csti.cdmgrupo.com/apirest.php';
+  const apiBaseUrl = process.env.URL_HML;
   const headers = {
       'Session-Token': session_token,
       'App-Token': process.env.APP_TOKEN,
