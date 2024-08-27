@@ -21,5 +21,5 @@ export const calculateTimeRemaining = (time_to_resolve) => {
     const formattedHours = `${String(diffHours).padStart(2, '0')}h`;
     const formattedMinutes = `${String(diffMinutes).padStart(2, '0')}m`;
 
-    return `TEMPO RESTANTE: ${formattedDays} ${formattedHours} ${formattedMinutes}`;
+    return `${formattedDays} ${formattedHours} ${formattedMinutes}`;
 };

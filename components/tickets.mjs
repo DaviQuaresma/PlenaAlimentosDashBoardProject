@@ -59,7 +59,7 @@ export default async function getTicketsNearDeadline(session_token) {
 
       processedTickets.sort((a, b) => parseFloat(b.SLA) - parseFloat(a.SLA));
 
-      return processedTickets.slice(0, 10);
+      return processedTickets.slice(0, 20);
 
       // EM CASO DE QUERER TRAZER TODOS BASTA COMENTAR TODO ESSE TRECHO E DESCOMENTAR O TRECHO DE CIMA
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
