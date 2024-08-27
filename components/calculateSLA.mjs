@@ -44,5 +44,9 @@ export const calculateSLA = (ticket) => {
     let slaPercentage = (elapsedWorkingHours / totalWorkingHours) * 100;
     slaPercentage = Math.max(0, Math.min(slaPercentage, 100));
 
-    return slaPercentage.toFixed(0);
+    // const slaPercentageInt = parseFloat(slaPercentage)
+    // return slaPercentage.toFixed(0);
+    // return slaPercentageInt.toFixed(0);
+    // return Math.round(slaPercentage);
+    return slaPercentage;
 };

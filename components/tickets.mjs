@@ -47,14 +47,14 @@ export default async function getTicketsNearDeadline(session_token) {
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       // PARA RETORNAR OS 10 CHAMADOS MAIS PROXIMOS A ESTOURAR
       const processedTickets = tickets.map((ticket, index) => ({
-        id: ticket['2'],
-        categorie: ticket['7'],
+        id: ticket['2'], // ['7']
+        categorie: ticket['1'],
         responsable: usersDetails[index] || ticket['5'],
         time_to_resolve: calculateTimeRemaining(ticket['151']),
         SLA: calculateSLA({
           date: ticket['15'],
           time_to_resolve: ticket['151'],
-        }) + '%'
+        })// + '%'
       }));
 
       processedTickets.sort((a, b) => parseFloat(b.SLA) - parseFloat(a.SLA));
